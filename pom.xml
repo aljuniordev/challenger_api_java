@@ -10,17 +10,17 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 
-	<groupId>br.com.lastmilepay</groupId>
-	<artifactId>LastMilePay</artifactId>
+	<groupId>br.com.challenge_api_java</groupId>
+	<artifactId>challenge_api_java</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>LastMilePay-API</name>
-	<description>API of LastMilePay service</description>
+	<name>challenge_api_java</name>
+	<description></description>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>${project.build.sourceEncoding}</project.reporting.outputEncoding>
 
-		<java.version>17</java.version>
+		<java.version>18</java.version>
 		<maven.compiler.source>${java.version}</maven.compiler.source>
 		<maven.compiler.target>${java.version}</maven.compiler.target>
 
@@ -28,6 +28,7 @@
 		<h2database.version>2.1.214</h2database.version>
 		<postgres.version>42.4.0</postgres.version>
 		<swagger.version>3.0.0</swagger.version>
+		<java-jwt.version>4.0.0</java-jwt.version>
 	</properties>
 
 	<dependencies>
@@ -35,6 +36,12 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter</artifactId>
+			<version>${springboot.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
 			<version>${springboot.version}</version>
 		</dependency>
 
@@ -53,6 +60,12 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
+			<version>${springboot.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-validation</artifactId>
 			<version>${springboot.version}</version>
 		</dependency>
 
@@ -78,13 +91,6 @@
 		</dependency>
 
 		<dependency>
-			<groupId>org.springframework.security</groupId>
-			<artifactId>spring-security-test</artifactId>
-			<version>${springboot.version}</version>
-			<scope>test</scope>
-		</dependency>
-
-		<dependency>
 			<groupId>com.h2database</groupId>
 			<artifactId>h2</artifactId>
 			<version>${h2database.version}</version>
@@ -98,7 +104,13 @@
 			<scope>runtime</scope>
 		</dependency>
 
-<!--		<dependency>-->
+		<dependency>
+			<groupId>com.auth0</groupId>
+			<artifactId>java-jwt</artifactId>
+			<version>${java-jwt.version}</version>
+		</dependency>
+
+		<!--		<dependency>-->
 <!--			<groupId>io.springfox</groupId>-->
 <!--			<artifactId>springfox-swagger2</artifactId>-->
 <!--			<version>${swagger.version}</version>-->

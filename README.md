@@ -4,7 +4,7 @@
 
 ## 💻 Prerequisites
 
-- JDK 17
+- JDK 18
 
 ## ☕ Using JAVA API Challenge
 
@@ -16,13 +16,13 @@ mvn spring-boot:run
 
 #### Endpoints
 
-- GET http://localhost:3000/crudbase/
-- PATCH http://localhost:3000/crudbase/{id}
-- DELETE http://localhost:3000/crudbase/{id}
+- GET http://localhost:3000/api/base/crud/
+- PATCH http://localhost:3000/api/base/crud/{id}
+- DELETE http://localhost:3000/api/base/crud/{id}
 
-- POST http://localhost:3000/login/
-- GET http://localhost:3000/login/
-- GET http://localhost:3000/teste/
+- POST http://localhost:3000/api/auth/sigin/
+- GET http://localhost:3000/api/auth/valid/
+- GET http://localhost:3000/api/teste/
 
 ## Technologies
 
